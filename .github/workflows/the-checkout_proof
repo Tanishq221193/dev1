@@ -1,7 +1,7 @@
 name: the-checkout_proof
-on:
- push:
- workflow_dispatch:
+on :
+    push:
+    workflow_dispatch:
 jobs:
   prove:
    runs-on: ubuntu-latest
