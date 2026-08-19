@@ -1,7 +1,7 @@
 name: the-checkout_proof
 on:
-push:
-workflow_dispatch:
+ push:
+ workflow_dispatch:
 jobs:
   prove:
    runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
          ls -la
      -name: check out repo and content of folder again
        uses: actions/checkout@v3
-       run: ls -la
+       
      -name: count of files in the current folder
        run: |
          echo "Count of files in the current folder:"
