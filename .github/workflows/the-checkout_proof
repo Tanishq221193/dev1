@@ -1,0 +1,25 @@
+name: the-checkout_proof
+on:
+push:
+workflow_dispatch:
+jobs:
+  prove:
+   runs-on: ubuntu-latest
+    steps:
+     - name: current folder path and its content
+       run: |
+         echo "Current folder path: $(pwd)"
+         echo "Content of the current folder:"
+         ls -la
+     -name: check out repo and content of folder again
+       uses: actions/checkout@v3
+       run: ls -la
+     -name: count of files in the current folder
+       run: |
+         echo "Count of files in the current folder:"
+         ls -1 | wc -l
+     -name : finish by proof captures
+       run: echo "Proof capture complete"
+     -name : one line explaining what the two listings show.
+       run: echo "The first listing shows the contents of the folder before checking out the repository, and the second listing shows the contents after checking out the repository."
+      
